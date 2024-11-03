@@ -1,0 +1,27 @@
+#include <string.h>
+
+struct Book {
+    char Tittle[30];
+    char Author[30];
+    int Publication_year;
+    char ISBN[13];
+    float Price;
+};
+
+int main() {
+    struct Book Book1;
+
+    strcpy(Book1.Tittle, "Introduction to Programming");
+    strcpy(Book1.Author, "John Smith");
+    Book1.Publication_year = 2022;
+    strcpy(Book1.ISBN, "9780131103627");
+    Book1.Price = 49.99;
+
+    printf("Tittle: %s\n", Book1.Tittle);
+    printf("Author: %s\n", Book1.Author);
+    printf("Publication Year: %d\n", Book1.Publication_year);
+    printf("ISBN: %s\n", Book1.ISBN);
+    printf("Price: $%.2f\n", Book1.Price);
+
+    return 0;
+}
